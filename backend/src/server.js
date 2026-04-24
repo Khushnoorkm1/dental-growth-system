@@ -13,7 +13,7 @@ import leadRoutes from './routes/leads.js';
 import chatRoutes from './routes/chat.js';
 import bookingRoutes from './routes/bookings.js';
 import analyticsRoutes from './routes/analytics.js';
-import authRoutes from './routes/auth.js';
+import authRoutes from './routes/authroutes.js';
 import automationRoutes from './routes/automation.js';
 
 const app = express();
