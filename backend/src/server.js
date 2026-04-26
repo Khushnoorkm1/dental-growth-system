@@ -57,12 +57,20 @@ app.use('/api/analytics', analyticsRoutes);
 app.use('/api/automation', automationRoutes);
 
 // ── Health Check ───────────────────────────────────────────────────────────────
-app.get('/api/health', (req, res) => {
-  res.json({
-    status: 'healthy',
-    timestamp: new Date().toISOString(),
-    env: process.env.NODE_ENV,
-    version: '1.0.0',
+// app.get('/api/health', (req, res) => {
+//   res.json({
+//     status: 'healthy',
+//     timestamp: new Date().toISOString(),
+//     env: process.env.NODE_ENV,
+//     version: '1.0.0',
+//   });
+// });
+
+   app.get('/', (req, res) => {
+  res.json({ 
+    message: "Dental Growth System Backend is running ✅",
+    docs: "/api/auth/login",
+    status: "OK"
   });
 });
 
